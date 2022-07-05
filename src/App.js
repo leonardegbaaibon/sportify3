@@ -44,7 +44,7 @@ function App() {
     axios
       .request(options)
       .then((res) => {
-        // console.log(res.data);
+        console.log(res.data);
         setImage(res.data);
       })
       .catch(function (error) {

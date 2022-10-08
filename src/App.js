@@ -22,11 +22,7 @@ function App() {
         ;
       });
       setSearchResult(newSet)
-      // console.log(searchResult)
-      // if(searchResult.length === 0){
-      //     console.log(searchWarning) 
-      //     return searchWarning
-      //   }
+
       }
       else{
         setSearchResult(image)
@@ -51,17 +47,6 @@ function App() {
         console.error(error);
       });
   }, []);
-  // }
-  // const getApi = () => {
-  //   axios.get('	https://api-football-standings.azharimm.site/leagues')
-  //   .then(res => {
-  //       console.log(res.data.data)
-  //       setImage(res.data.data)
-  //   })
-  //   .catch(err => {
-  //     console.log(err)
-  //   })
-  // }
   return (
     <div className="App">
       <Navbar 
@@ -69,7 +54,6 @@ function App() {
       searchKeyword={searchHandler}
       searchWarn = {searchResult} />
       <header className="App-header">
-        {/* <button onClick={getApi}><h3>Get react</h3></button> */}
         {searchResult.length === 0 && searchItem.length > 0 ? <div className="result-warning">No Results found</div>  : console.log()}
         {searchItem.length > 0 ? (
           searchResult.map((data) => {
